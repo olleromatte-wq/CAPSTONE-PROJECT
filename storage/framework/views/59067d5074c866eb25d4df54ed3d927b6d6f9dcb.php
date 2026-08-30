@@ -1,0 +1,7 @@
+
+<?php $__env->startSection('content'); ?>
+<header class="header"><div class="container navbar"><a class="brand" href="<?php echo e(route('home')); ?>"><img class="logo" src="<?php echo e(route('legacy.image', ['path' => 'ncbii_logo_transparent.png'])); ?>" alt="NCBII logo"><div class="brand-text"><h2>North Coast Bohol Institute</h2><span><?php echo e($portal ?? 'Academic Information System'); ?></span></div></a><a href="<?php echo e(route('login')); ?>" class="login-btn">Open Portal</a></div></header>
+<main class="staff-main"><section class="staff-hero"><div class="container staff-heading"><div><span class="welcome-label">NCBII ACADEMIC INFORMATION SYSTEM</span><h1><?php echo e($heading ?? 'Portal page'); ?></h1><p><?php echo e($description ?? 'This portal page is now served by Laravel.'); ?></p></div></div></section><section class="container staff-content"><div class="access-note"><strong>Laravel portal migration active.</strong><span>The existing design system and page structure are preserved.</span></div></section></main>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.portal', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\CAPSTONE PROJECT\resources\views/legacy-page.blade.php ENDPATH**/ ?>

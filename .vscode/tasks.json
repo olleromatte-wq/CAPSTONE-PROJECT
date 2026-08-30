@@ -1,0 +1,157 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Install Laravel dependencies",
+			"type": "shell",
+			"command": "composer",
+			"args": [
+				"install",
+				"--no-interaction"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Diagnose Laravel dependencies",
+			"type": "shell",
+			"command": "php",
+			"args": [
+				"-v"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Capture Composer error",
+			"type": "shell",
+			"command": "php",
+			"args": [
+				"C:\\Users\\Jeriane Mae\\AppData\\Roaming\\Composer\\latest.phar",
+				"install",
+				"--no-interaction",
+				"-vvv"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Locate PHP executable",
+			"type": "shell",
+			"command": "Get-ChildItem",
+			"args": [
+				"C:\\xampp\\php\\php.exe",
+				"C:\\laragon\\bin\\php\\*\\php.exe",
+				"C:\\wamp64\\bin\\php\\*\\php.exe",
+				"$env:LOCALAPPDATA\\Programs\\PHP\\php.exe",
+				"$env:ProgramFiles\\PHP\\php.exe",
+				"$env:USERPROFILE\\scoop\\apps\\php\\current\\php.exe",
+				"-ErrorAction",
+				"SilentlyContinue"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Find installed PHP",
+			"type": "shell",
+			"command": "$paths = @('C:\\xampp\\php\\php.exe','C:\\laragon\\bin\\php\\*\\php.exe','C:\\wamp64\\bin\\php\\*\\php.exe',\"$env:LOCALAPPDATA\\Programs\\PHP\\php.exe\",\"$env:ProgramFiles\\PHP\\php.exe\", \"$env:USERPROFILE\\scoop\\apps\\php\\current\\php.exe\"); $paths | ForEach-Object { Get-ChildItem -Path $_ -ErrorAction SilentlyContinue }",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Check PHP locations",
+			"type": "shell",
+			"command": "where.exe php; Get-ChildItem -Path C:\\xampp\\php\\php.exe,C:\\laragon\\bin\\php,C:\\wamp64\\bin\\php -Filter php.exe -Recurse -ErrorAction SilentlyContinue",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Install Laravel dependencies",
+			"type": "shell",
+			"command": "C:\\xampp\\php\\php.exe",
+			"args": [
+				"C:\\Users\\Jeriane Mae\\AppData\\Roaming\\Composer\\latest.phar",
+				"install",
+				"--no-interaction"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Laravel bootstrap dependency install 2026",
+			"type": "shell",
+			"command": "C:\\xampp\\php\\php.exe C:\\Users\\Jeriane Mae\\AppData\\Roaming\\Composer\\latest.phar install --no-interaction",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Laravel dependency install quoted",
+			"type": "shell",
+			"command": "& 'C:\\xampp\\php\\php.exe' 'C:\\Users\\Jeriane Mae\\AppData\\Roaming\\Composer\\latest.phar' install --no-interaction",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Verify Laravel 9 dependencies",
+			"type": "shell",
+			"command": "& 'C:\\xampp\\php\\php.exe' 'C:\\Users\\Jeriane Mae\\AppData\\Roaming\\Composer\\latest.phar' update --no-interaction --no-security-blocking",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Generate Laravel application key",
+			"type": "shell",
+			"command": "if (!(Test-Path .env)) { Copy-Item .env.example .env }; & 'C:\\xampp\\php\\php.exe' artisan key:generate",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Check Laravel routes",
+			"type": "shell",
+			"command": "& 'C:\\xampp\\php\\php.exe' artisan route:list",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Validate Laravel routes after fix",
+			"type": "shell",
+			"command": "& 'C:\\xampp\\php\\php.exe' artisan route:list",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Validate Laravel application boot",
+			"type": "shell",
+			"command": "& 'C:\\xampp\\php\\php.exe' artisan route:list",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Confirm Laravel routes work",
+			"type": "shell",
+			"command": "& 'C:\\xampp\\php\\php.exe' artisan route:list",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Final Laravel route check",
+			"type": "shell",
+			"command": "& 'C:\\xampp\\php\\php.exe' artisan route:list",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Verify Laravel routes final",
+			"type": "shell",
+			"command": "& 'C:\\xampp\\php\\php.exe' artisan route:list",
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}
